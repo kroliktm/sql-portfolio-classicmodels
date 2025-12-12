@@ -86,6 +86,50 @@ The country was added to make the result easier to understand from a business po
 It allows us to see not only who the top customers are, but also where they come from.
 
 ---
+---
+
+## Product Analysis
+
+### P1 – Top Products by Revenue
+
+This analysis answers the question:
+
+**Which products generate the highest revenue?**
+
+Revenue is calculated as:
+
+`quantityOrdered × priceEach`
+
+The analysis identifies the best-performing products that generate the highest sales value.
+The SQL query is available in:
+`sql/02_products.sql`
+
+---
+
+### P2 – Worst-Selling Products
+
+This analysis focuses on products with the lowest sales revenue, including products that have never been sold.
+
+The analysis revealed at least one product with zero revenue, meaning it has never been sold.
+This may indicate an inactive or underperforming product that requires business attention.
+
+The SQL query is available in:
+`sql/02_products.sql`
+
+---
+
+### P3 – High Stock but Low Sales Products
+
+This analysis identifies products that have a high inventory level but low sales volume.
+
+Such products may indicate:
+- frozen capital in inventory,
+- inefficient stock management,
+- the need for promotions or product review.
+
+The SQL query is available in:
+`sql/02_products.sql`
+
 
 ## Tools Used
 
