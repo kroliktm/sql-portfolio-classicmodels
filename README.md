@@ -129,6 +129,24 @@ Such products may indicate:
 
 The SQL query is available in:
 `sql/02_products.sql`
+---
+
+## Sales Trend Analysis
+
+### T1 – Monthly Sales Trend
+
+This analysis shows how sales change over time on a monthly basis.
+
+- Time period: grouped by month using `orderDate`
+- Metric: total monthly revenue = `SUM(quantityOrdered × priceEach)`
+
+This helps identify:
+- overall growth or decline,
+- seasonality (strong/weak months),
+- months that need business investigation.
+
+The SQL query is available in:
+`sql/03_sales_trends.sql`
 
 
 ## Tools Used
