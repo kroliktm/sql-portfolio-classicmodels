@@ -46,3 +46,22 @@ GROUP BY
 ORDER BY
     total_revenue ASC
 LIMIT 10;
+
+-- P3: High stock but low sales products
+
+SELECT 
+    p.productCode,
+    p.productName,
+    p.quantityInStock,
+    IFNULL(SUM(od.quantityOrdered), 0) AS qty_ordered
+FROM products p
+LEFT JOIN orderdetails od USING (productCode)
+GROUP BY 
+    p.productCode,
+    p.productName,
+    p.quantityInStock
+ORDER BY 
+    p.quantityInStock DESC,
+    qty_ordered ASC
+LIMIT 10;
+
