@@ -62,27 +62,3 @@ ORDER BY
     total_revenue DESC
 LIMIT 10;
 
--- ------------------------------------------------
--- STEP 4 (C3): High revenue but low payments
--- Business Question:
--- Which customers generate high revenue but have low payments?
--- ------------------------------------------------
-
-SELECT
-    c.customerNumber,
-    c.customerName,
-    ROUND(SUM(od.quantityOrdered * od.priceEach), 2) AS total_revenue,
-    ROUND(SUM(p.amount), 2) AS total_payments,
-    ROUND(
-        SUM(od.quantityOrdered * od.priceEach) - IFNULL(SUM(p.amount), 0),
-        2
-    ) AS outstanding_amount
-FROM customers c
-JOIN orders o USING (customerNumber)
-JOIN orderdetails od USING (orderNumber)
-LEFT JOIN payments p USING (customerNumber)
-GROUP BY
-    c.customerNumber,
-    c.customerName
-ORDER BY
-    outstanding_amount DESC;
