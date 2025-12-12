@@ -148,6 +148,17 @@ This helps identify:
 The SQL query is available in:
 `sql/03_sales_trends.sql`
 
+### Pareto Analysis – Sales by Country (80/20)
+
+A Pareto analysis was performed to identify the countries responsible for the majority of total revenue.
+
+The analysis showed that the top 9 countries generate approximately 81% of total company sales.
+This indicates a strong concentration of revenue in a small number of key markets.
+
+The SQL query for this analysis is available in:
+`sql/04_sales_by_country.sql`
+
+
 
 ## Tools Used
 
