@@ -1,4 +1,16 @@
 # Classic Models – SQL Data Analysis Portfolio
+## Executive Summary
+
+This project analyzes sales data from the Classic Models database using SQL to identify key revenue drivers and business insights.
+
+Key findings:
+- Revenue is highly concentrated among a small group of customers.
+- Product performance varies significantly, with some products generating high revenue and others showing little or no sales.
+- Sales are geographically concentrated: the top 9 countries generate approximately 81% of total company revenue (Pareto effect).
+- Monthly sales trends reveal periods of stronger and weaker performance, useful for identifying seasonality.
+
+The project demonstrates practical SQL skills, including joins, aggregations, window functions, and business-oriented analysis.
+
 
 This project is a SQL-based data analysis of the Classic Models sample database.  
 The goal of the project is to practice real-world data analyst skills such as:
